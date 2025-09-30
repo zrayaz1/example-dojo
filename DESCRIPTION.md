@@ -1,3 +1,4 @@
+<latex>
 # Coppersmith's Method and RSA
 ## Introduction
 The following is a guide for understanding the application of Coppersmith's Theorem to attacks on the RSA cryptosystem. Although many refer to such as Coppersmith's attack, it is actually a class of attacks which can be applied to many relaxed version of the RSA cryptosystem. Coppersmith's thoerm is a statement about finding "small" roots of finite field polynomials. The general class of attacks on RSA involves converting partial information about RSA secrets into polynomials whose "small" roots will be something desireable for us.
@@ -52,7 +53,6 @@ Recall our polynomial $f(x) = a + x \pmod{p}$. So $f$ has degree $1$ and modulus
 Following the procedure we pick $\epsilon = \frac{1}{14}, m = \lceil \frac{0.5^2}{\frac{1}{7}} \rceil = 2, t = \lfloor2(\frac{1}{0.5} - 1)\rfloor = 2$.
 
 This makes our polynomial collection the following:
-<latex>
 $$
 \begin{aligned}
 g_{0,0}(x) &= f^2(x) = (a + x)^2 \\
@@ -61,7 +61,6 @@ h_0(x) &= f^2(x) = (a+x)^2 \\
 h_1(x) &= xf^2(x) = x(a + x)^2
 \end{aligned}
 $$
-</latex>
 
 There is one duplicate, $h_0(x) = g_{0,0}(x)$, so we can just keep one. In practice we generate these programatically. (ADD CHALLENGE FOR THIS?) If you want you can confirm that they all share $r$, the unknown part of $p$, as a root modulo $p^2$. The coefficient vectors of these polynomials will form the basis of our lattice, however to force the lattice to have a short vector caused by a polynomial with small coefficients, we scale using our bound $X = \frac{1}{2}\lceil n^{\frac{0.5^2}{1} - \frac{1}{14}} \rceil$. This in short makes the basis work better with LLL and we can simply undo the scaling on our result. 
 
@@ -113,5 +112,7 @@ Running this yields:
  22724987319978865551677691313649855443364865617810460263421857351112712039928265585738492063970761907619956534066362294947953662499568262484537206764470272,
  1,
  0]`
+
+ </latex>
 
  TODO: Show how to solve new polynomial in the integers to recover $p$
