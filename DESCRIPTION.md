@@ -1,4 +1,8 @@
 
+\usepackage{amsmath}
+
+
+# TEST
 # Coppersmith's Method and RSA
 ## Introduction
 The following is a guide for understanding the application of Coppersmith's Theorem to attacks on the RSA cryptosystem. Although many refer to such as Coppersmith's attack, it is actually a class of attacks which can be applied to many relaxed version of the RSA cryptosystem. Coppersmith's thoerm is a statement about finding "small" roots of finite field polynomials. The general class of attacks on RSA involves converting partial information about RSA secrets into polynomials whose "small" roots will be something desireable for us.
@@ -67,6 +71,7 @@ $$ h_1(x) = xf^2(x) = x(a + x)^2 $$
 There is one duplicate, $h_0(x) = g_{0,0}(x)$, so we can just keep one. In practice we generate these programatically. (ADD CHALLENGE FOR THIS?) If you want you can confirm that they all share $r$, the unknown part of $p$, as a root modulo $p^2$. The coefficient vectors of these polynomials will form the basis of our lattice, however to force the lattice to have a short vector caused by a polynomial with small coefficients, we scale using our bound $X = \frac{1}{2}\lceil n^{\frac{0.5^2}{1} - \frac{1}{14}} \rceil$. This in short makes the basis work better with LLL and we can simply undo the scaling on our result. 
 
 The signifigance of this basis is that vectors in the lattice will be coefficient vectors of other polynomials that also have a root at $r$ modulo $p^2$, since they will be integer linear combinations of the polynomials in our collection. Here is our example lattice C where the basis vectors are row vectors.
+
 $$
 C = 
 \begin{matrix}
