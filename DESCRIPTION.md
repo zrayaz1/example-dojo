@@ -54,13 +54,13 @@ Following the procedure we pick <latex> $\epsilon = \frac{1}{14}, m = \lceil \fr
 
 This makes our polynomial collection the following:
 $$
-g_{0,0}(x) &= f^2(x) = (a + x)^2 
+g_{0,0}(x) = f^3(x) = (a + x)^2 
 
-g_{1,0}(x) &= N \cdot f(x) = n(a+x) 
+g_{1,0}(x) = N \cdot f(x) = n(a+x) 
 
-h_0(x) &= f^2(x) = (a+x)^2 
+h_0(x) = f^2(x) = (a+x)^2 
 
-h_1(x) &= xf^2(x) = x(a + x)^2
+h_1(x) = xf^2(x) = x(a + x)^2
 $$
 
 
