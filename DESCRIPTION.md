@@ -53,16 +53,18 @@ Recall our polynomial $f(x) = a + x \pmod{p}$. So $f$ has degree $1$ and modulus
 Following the procedure we pick <latex> $\epsilon = \frac{1}{14}, m = \lceil \frac{0.5^2}{\frac{1}{7}} \rceil = 2, t = \lfloor2(\frac{1}{0.5} - 1)\rfloor = 2$ </latex>.
 
 This makes our polynomial collection the following:
-<latex>
 $$
 \begin{aligned}
 g_{0,0}(x) &= f^2(x) = (a + x)^2 \\
+
 g_{1,0}(x) &= N \cdot f(x) = n(a+x) \\
+
 h_0(x) &= f^2(x) = (a+x)^2 \\
+
 h_1(x) &= xf^2(x) = x(a + x)^2
 \end{aligned}
 $$
-</latex>
+
 
 There is one duplicate, $h_0(x) = g_{0,0}(x)$, so we can just keep one. In practice we generate these programatically. (ADD CHALLENGE FOR THIS?) If you want you can confirm that they all share $r$, the unknown part of $p$, as a root modulo $p^2$. The coefficient vectors of these polynomials will form the basis of our lattice, however to force the lattice to have a short vector caused by a polynomial with small coefficients, we scale using our bound $X = \frac{1}{2}\lceil n^{\frac{0.5^2}{1} - \frac{1}{14}} \rceil$. This in short makes the basis work better with LLL and we can simply undo the scaling on our result. 
 
