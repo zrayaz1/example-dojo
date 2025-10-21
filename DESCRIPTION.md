@@ -67,16 +67,14 @@ $$ h_1(x) = xf^2(x) = x(a + x)^2 $$
 There is one duplicate, $h_0(x) = g_{0,0}(x)$, so we can just keep one. In practice we generate these programatically. (ADD CHALLENGE FOR THIS?) If you want you can confirm that they all share $r$, the unknown part of $p$, as a root modulo $p^2$. The coefficient vectors of these polynomials will form the basis of our lattice, however to force the lattice to have a short vector caused by a polynomial with small coefficients, we scale using our bound $X = \frac{1}{2}\lceil n^{\frac{0.5^2}{1} - \frac{1}{14}} \rceil$. This in short makes the basis work better with LLL and we can simply undo the scaling on our result. 
 
 The signifigance of this basis is that vectors in the lattice will be coefficient vectors of other polynomials that also have a root at $r$ modulo $p^2$, since they will be integer linear combinations of the polynomials in our collection. Here is our example lattice C where the basis vectors are row vectors.
-<latex>
 $$
-C = 
+D = 
 \begin{bmatrix}
 a^2 & 2aX & X^2 & 0 \\
 na & nX & 0 & 0 \\
 0 & a^2X & 2aX^2 & X^3
 \end{bmatrix}
 $$
-</latex>
 Now we are ready to perform LLL. This will give us a very short vector in this lattice, and by construction after we undo our scaling, it will represent the polynomial with a root at $r$, but because its a short vector, this root holds over the integers and not just modulo $p^2$. Below is some example sage code constructing the lattice and performing LLL on it to output the unscaled short vector.
 
 ```python
