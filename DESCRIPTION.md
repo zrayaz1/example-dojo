@@ -1,3 +1,5 @@
+<latex>
+
 \[
         C =        
 \begin{bmatrix}
@@ -122,6 +124,5 @@ Running this yields:
  1,
  0]`
 
- 
-
+ </latex>
  TODO: Show how to solve new polynomial in the integers to recover $p$
