@@ -55,15 +55,15 @@ This makes our polynomial collection the following:
 
 \\[
 \begin{aligned}
-g_{0,0}(x) &= f^4(x) = (a + x)^4 \\
-g_{1,0}(x) &= N \cdot f^3(x) = n(a+x)^3 \\
-g_{2,0}(x) &= N^2 \cdot f^2(x) = n^2(a+x)^2 \\
-g_{3,0}(x) &= N^3 \cdot f(x) = n^3(a+x) \\
-g_{4,0}(x) &= N^4 = n^4 \\
-h_0(x) &= f^4(x) = (a+x)^4 \\
-h_1(x) &= xf^4(x) = x(a + x)^4 \\
-h_2(x) &= x^2f^4(x) = x^2(a + x)^4 \\
-h_3(x) &= x^3f^4(x) = x^3(a + x)^4 \\
+g_{0,0}(x) &= f^4(x) = (a + x)^4 \\\\
+g_{1,0}(x) &= N \cdot f^3(x) = n(a+x)^3 \\\\
+g_{2,0}(x) &= N^2 \cdot f^2(x) = n^2(a+x)^2 \\\\
+g_{3,0}(x) &= N^3 \cdot f(x) = n^3(a+x) \\\\
+g_{4,0}(x) &= N^4 = n^4 \\\\
+h_0(x) &= f^4(x) = (a+x)^4 \\\\
+h_1(x) &= xf^4(x) = x(a + x)^4 \\\\
+h_2(x) &= x^2f^4(x) = x^2(a + x)^4 \\\\
+h_3(x) &= x^3f^4(x) = x^3(a + x)^4 \\\\
 \end{aligned}
 \\]
 
