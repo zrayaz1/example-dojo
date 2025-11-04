@@ -1,13 +1,13 @@
-<latex>
+
 
 \[
-        C =        
 \begin{bmatrix}
 a^2 & 2aX & X^2 & 0 \\
 na & nX & 0 & 0 \\
 0 & a^2X & 2aX^2 & X^3
 \end{bmatrix}
 \]
+
 # Coppersmith's Method and RSA
 ## Introduction
 The following is a guide for understanding the application of Coppersmith's Theorem to attacks on the RSA cryptosystem. Although many refer to such as Coppersmith's attack, it is actually a class of attacks which can be applied to many relaxed version of the RSA cryptosystem. Coppersmith's thoerm is a statement about finding "small" roots of finite field polynomials. The general class of attacks on RSA involves converting partial information about RSA secrets into polynomials whose "small" roots will be something desireable for us.
@@ -124,5 +124,5 @@ Running this yields:
  1,
  0]`
 
- </latex>
+
  TODO: Show how to solve new polynomial in the integers to recover $p$
