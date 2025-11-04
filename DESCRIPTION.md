@@ -68,11 +68,11 @@ The signifigance of this basis is that vectors in the lattice will be coefficien
 
 \\[
 C = 
-\begin{bmatrix}
+\\begin{bmatrix}
 a^2 & 2aX & X^2 & 0 \\
 na & nX & 0 & 0 \\
 0 & a^2X & 2aX^2 & X^3
-\end{bmatrix}
+\\end{bmatrix}
 \\]
 
 Now we are ready to perform LLL. This will give us a very short vector in this lattice, and by construction after we undo our scaling, it will represent the polynomial with a root at $r$, but because its a short vector, this root holds over the integers and not just modulo $p^2$. Below is some example sage code constructing the lattice and performing LLL on it to output the unscaled short vector.
