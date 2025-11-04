@@ -69,8 +69,8 @@ The signifigance of this basis is that vectors in the lattice will be coefficien
 \\[
 C = 
 \\begin{bmatrix}
-a^2 & 2aX & X^2 & 0 \\
-na & nX & 0 & 0 \\
+a^2 & 2aX & X^2 & 0 \\\\
+na & nX & 0 & 0 \\\\
 0 & a^2X & 2aX^2 & X^3
 \\end{bmatrix}
 \\]
