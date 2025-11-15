@@ -1,3 +1,25 @@
+
+
+<details>
+<summary>Spoiler warning</summary>
+
+Spoiler text goes here. Note the blank line after the summary tag.
+
+You can include **markdown** formatting, code blocks, etc.
+</details>
+
+>! This text is hidden until clicked
+
+
+
+
+
+
+
+
+
+
+
 # Coppersmith's Method and RSA
 ## Introduction
 The following is a guide for understanding the application of Coppersmith's Theorem to attacks on the RSA cryptosystem. Although many refer to such as Coppersmith's attack, it is actually a class of attacks which can be applied to many relaxed version of the RSA cryptosystem. Coppersmith's thoerm is a statement about finding "small" roots of finite field polynomials. The general class of attacks on RSA involves converting partial information about RSA secrets into polynomials whose "small" roots will be something desireable for us.
